@@ -3,6 +3,7 @@
 var http = require('http');
 var express = require('express');
 var fs = require('fs');
+<<<<<<< HEAD
 var mysql = require('mysql');
 //var path = require('path');
 //var sql = require('./sql.js');
@@ -11,6 +12,13 @@ var serv = express();
 
 var ipaddress = process.env.OPENSHIFT_NODEJS_IP;
 var port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+=======
+
+var serv = express();
+
+//var ipaddress = "52.27.209.129";
+var port = 8080;
+>>>>>>> f66057ba8d887206aa9ff1795ada314da7902fc4
 
 function handleRequest(request, response){
 	response.end('IT worked ' + request.url);
@@ -22,6 +30,7 @@ serv.createRoutes = function(){
 	serv.routes = {};
 	serv.routes['/'] = function(req, res) {
 		res.setHeader('Content-Type', 'text/html');
+<<<<<<< HEAD
 		res.sendfile(__dirname + '/index.html');
 	};
 	serv.routes['/test'] = function(req, res) {
@@ -32,6 +41,9 @@ serv.createRoutes = function(){
 		res.setHeader();
 		doSQL();
 		//res.send(doSQL());
+=======
+		res.sendFile(__dirname + '/public/index.html');
+>>>>>>> f66057ba8d887206aa9ff1795ada314da7902fc4
 	};
 }
 
@@ -40,6 +52,7 @@ for (var r in serv.routes) {
 	serv.get(r, serv.routes[r]);
 }
 
+<<<<<<< HEAD
 //serv.use(express.static(path.join(__dirname. 'public')));
 doSQL = function() {
 
@@ -70,5 +83,8 @@ connection.end(function(err){});
 }
 
 serv.listen(port, ipaddress, function(){
+=======
+serv.listen(port, function(){
+>>>>>>> f66057ba8d887206aa9ff1795ada314da7902fc4
 	console.log("Server listening on: whatever");
 });
