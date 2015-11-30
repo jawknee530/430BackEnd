@@ -9,7 +9,7 @@
     $password = $data['password'];
 
     //fetch table rows from mysql db
-    $sql = "select * from Users";// where username = '$username' AND password = '$password'";
+    $sql = "select * from Users where username = '$username' AND password = '$password'";
     $result = mysqli_query($connection, $sql) or die("Error in Selecting " . mysqli_error($connection));
 
     //create an array

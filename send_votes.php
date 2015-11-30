@@ -9,7 +9,7 @@
     $artist = $data['artist'];
     //$title = "insane";
     //$artist = "flume";
-    $sql = "INSERT INTO Music(title, artist)
+    $sql = "INSERT INTO Songs(title, artist)
     VALUES('$title', '$artist')";
 
     if(!mysqli_query($connection, $sql))
