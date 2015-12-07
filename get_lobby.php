@@ -9,7 +9,7 @@
     $lobby_password = $data['lobby_password'];
 
     //fetch table rows from mysql db
-    $sql = "select * from Lobby where lobby_name = '$artist' AND lobby_password = '$lobby_password'";
+    $sql = "select * from Lobby where lobby_name = '$lobby_name' AND lobby_password = '$lobby_password'";
     $result = mysqli_query($connection, $sql) or die("Error in Selecting " . mysqli_error($connection));
 
     //create an array

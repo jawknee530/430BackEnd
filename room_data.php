@@ -6,7 +6,6 @@
     $data = json_decode($jsondata, true);
 
     $lobby_name = $data['lobby_name'];
-    $lobby_password = $data['lobby_password'];
 
     //fetch table rows from mysql db
     $sql = "select * from Songs where lobby = '$lobby_name'";
