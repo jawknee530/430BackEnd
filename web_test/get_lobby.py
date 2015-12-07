@@ -12,4 +12,5 @@ req = requests.get(url, data=json.dumps(dat))
 print testString
 print req.text
 assert req.text == testString
+print "^^^-----^^^-- Should be lobby object --^^^-----^^^"
 

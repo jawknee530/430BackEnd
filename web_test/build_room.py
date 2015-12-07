@@ -15,5 +15,5 @@ print testString
 print req.text
 assert req.text == testString
 
-print "^^^-----^^^-- Should be emtpy strings --^^^-----^^^"
+print "^^^-----^^^-- Should be empty strings --^^^-----^^^"
 
