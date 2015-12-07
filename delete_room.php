@@ -9,7 +9,7 @@
     $lobby_name = $data['lobby_name'];
 
     //fetch table rows from mysql db
-    $sql = "delete from Lobby where owner = '$owner' AND lobby_name = '$lobby_name";
+    $sql = "delete from Lobby where owner = '$owner' AND lobby_name = '$lobby_name' ";
     $result = mysqli_query($connection, $sql) or die("Error in Selecting " . mysqli_error($connection));
 
     //create an array

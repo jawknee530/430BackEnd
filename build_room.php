@@ -17,7 +17,4 @@
         die('Error : ' . mysqli_error());
     }
 
-$array = array('owner' => $owner, 'lobby_name' => $lobby_name, 'lobby_password' => $lobby_password);
-echo json_encode($array);
-
 ?>

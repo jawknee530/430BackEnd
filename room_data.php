@@ -8,7 +8,7 @@
     $lobby_name = $data['lobby_name'];
 
     //fetch table rows from mysql db
-    $sql = "select * from Songs where lobby = '$lobby_name'";
+    $sql = "select * from Songs where lobby = '$lobby_name' order by votes";
     $result = mysqli_query($connection, $sql) or die("Error in Selecting " . mysqli_error($connection));
 
     //create an array
